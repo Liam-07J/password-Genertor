@@ -1,0 +1,21 @@
+body {
+    background-color: blanchedalmond;
+
+}
+input {
+    height: 20px;
+    width: 240px;
+    font-size: 10px;
+    background-color: rgb(238, 220, 173);
+    border-radius: 5px;
+
+}
+button {
+    background-color: rgb(238, 220, 173);
+    border-radius: 5px;
+    width: 118px;
+}
+h1 {
+    text-decoration: underline;
+    font-size: 30px;
+}

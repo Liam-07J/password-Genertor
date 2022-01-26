@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Genertors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Password Genertors</h1>
+    <!--creates button and boxes-->
+    <input type="text" name="" id="amount_box" placeholder="How many passwords do you want to generate">
+    <br>
+    <br>
+    <input type="text" name="" id="length_box" placeholder="How long do you want them to be">
+    <br>
+    <br>
+    <button onclick="myFunction()">Click me</button>
+    <button onclick="clearfunc()">Clear</button>
+    <p id="output"></p>
+    <script>
+        function myFunction(){
+            var password_amount = document.getElementById("amount_box").value;
+            var password_length = document.getElementById("length_box").value;
+            // genertors  amount of passwords
+            for (x = 0;x < password_amount;x++){
+                password = "";
+                // create random letters and adds them to password varaible
+                for (i = 0;i < password_length;i++){
+                let ran = Math.round(Math.random() * 78);
+                charcter = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890!#$%&*+‑/<=>?x@";
+                let letter = charcter.charAt(ran);
+                password += letter;
+                }
+                console.log(password);
+                // TODO should add "password " + n + ":" where n is number of password generteted
+                document.getElementById("output").innerHTML += "New Password:" + "<br>" +  password + "<br>";
+            }
+        }
+        function clearfunc(){
+            document.getElementById("output").innerHTML = "";
+        }    
+    </script>
+</body>
+</html>
